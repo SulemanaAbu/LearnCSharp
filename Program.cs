@@ -7,31 +7,26 @@ namespace MyFirstProgram
         // C# methods
         static void Main(string[] args)
         {
-            String name = "Sulemana Abubakar Saddique";
-            int age = 20;
-            String residence = "Ashaley Botwe";
+            double x;
+            double y;
+            double result;
             
-            myBirthInfo(name,age,residence);
-            Console.WriteLine();
-            singHappyBirthday(name, age);
+            Console.WriteLine("Enter x: ");
+            x = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("x = "+x);
             
+            Console.WriteLine("Enter y: ");
+            y = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("y = "+y);
 
+            result = Multiply(x,y);
+            Console.WriteLine($"The result {x} * {y} = "+result);
         }
 
-        static void myBirthInfo(String name, int age, String residence)
+        static double Multiply(double x ,double y)
         {
-            Console.WriteLine("My name is "+name);
-            Console.WriteLine("I am "+age+ " years old");
-            Console.WriteLine("I stay at "+residence);
-            
+            return  x * y;
         }
-
-        static void singHappyBirthday(String name, int age)
-        {
-            Console.WriteLine("Happy Birthday to you");
-            Console.WriteLine("Happy Birthday to you");
-            Console.WriteLine("Happy Birthday dear "+name);
-            Console.WriteLine("You are "+age+" years old now");
-        }
+        
     }
 }
