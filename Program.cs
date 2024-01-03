@@ -7,8 +7,7 @@ namespace MyFirstProgram
         //while loop
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter your name: ");
-            String name = Console.ReadLine();
+            String name = "";
            
 
             while (name == "")
