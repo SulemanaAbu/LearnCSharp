@@ -8,9 +8,9 @@ namespace MyFirstProgram
         static void Main(string[] args)
         {
             String[] car = { "BMW", "Mustang", "Corvette" };
-            for (int i =0; i < car.Length; i++)
+            foreach (String s in car)
             {
-                Console.WriteLine(car[i]);
+                Console.WriteLine(s);
             }
             
         }
