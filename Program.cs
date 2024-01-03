@@ -4,107 +4,62 @@ namespace MyFirstProgram
 {
     class Program
     {
-        // rock paper scissors game 
+        // Calculator Program 
         static void Main(string[] args)
         {
-            Console.ReadKey();
-            Random random = new Random();
-            bool playAgain = true;
-            String player;
-            String computer;
-            String response;
-
-            while (playAgain)
+            do
             {
-                player = "";
-                computer = "";
-                while (player != "ROCK" && player != "PAPER" && player != "SCISSORS" )
-                {
-                    Console.WriteLine("Enter ROCK, PAPER or SCISSORS");
-                    player = Console.ReadLine();
-                    player = player.ToUpper();
-                }
+                double num1 = 0;
+                double num2 = 0;
+                double result = 0;
+           
 
-                int randomNum = random.Next(1, 4);
-                switch (randomNum)
-                {
-                    case 1:
-                        computer = "ROCK";
-                        break;
-                    case 2:
-                        computer = "PAPER";
-                        break;
-                    case 3:
-                        computer = "SCISSORS";
-                        break;
-                }
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Calculator Program");
+                Console.WriteLine("--------------------");
 
-                Console.WriteLine("Player: "+player);
-                Console.WriteLine("Computer: "+computer);
+                Console.WriteLine("Enter first number: ");
+                num1 = Convert.ToDouble(Console.ReadLine());
 
-                switch (player)
+                Console.WriteLine("Enter second number: ");
+                num2 = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Select an option");
+                Console.WriteLine("\t+ : Add");
+                Console.WriteLine("\t- : Subtract");
+                Console.WriteLine("\t* : Multiply");
+                Console.WriteLine("\t/ : Divide");
+
+                Console.WriteLine("Enter an option");
+
+                switch (Console.ReadLine())
                 {
-                    case "ROCK":
-                        if (computer == "ROCK")
-                        {
-                            Console.WriteLine("It's a DRAW!");
-                        }
-                        else if (computer == "PAPER")
-                        {
-                            Console.WriteLine("You lose");
-                        }
-                        else
-                        {
-                            Console.WriteLine("You WIN!!");
-                        }
-                        
+                    case "+":
+                        result = num1 + num2;
+                        Console.WriteLine($"The result: {num1} + {num2} = " + result);
                         break;
-                    case "PAPER":
-                        if (computer == "ROCK")
-                        {
-                            Console.WriteLine("You WIN!!");
-                        }
-                        else if (computer == "PAPER")
-                        {
-                            Console.WriteLine("It's a DRAW!!");
-                        }
-                        else
-                        {
-                            Console.WriteLine("You lose!!");
-                        }
+                    case "-":
+                        result = num1 - num2;
+                        Console.WriteLine($"The result: {num1} - {num2} = " + result);
                         break;
-                    case "SCISSORS":
-                        if (computer == "ROCK")
-                        {
-                            Console.WriteLine("You lose!");
-                        }
-                        else if (computer == "PAPER")
-                        {
-                            Console.WriteLine("You WIN!!");
-                        }
-                        else
-                        {
-                            Console.WriteLine("It's a DRAW!!");
-                        }
+                    case "*":
+                        result = num1 * num2;
+                        Console.WriteLine($"The result: {num1} * {num2} = " + result);
+                        break;
+                    case "/":
+                        result = num1 / num2;
+                        Console.WriteLine($"The result: {num1} / {num2} = " + result);
+                        break;
+                    default:
+                        Console.WriteLine("That was not a valid option");
                         break;
                 }
 
-                Console.WriteLine("Would you like to play again? (Y/N)");
-                response = Console.ReadLine();
-                response = response.ToUpper();
-
-                if (response == "Y")
-                {
-                    playAgain = true;
-                }
-                else 
-                {
-                    playAgain = false;
-                }
-                
+                Console.WriteLine("Would you like to continue (Y = yes)/ (N = no)");
+            } while (Console.ReadLine().ToUpper() == "Y")
+                ;{
+                Console.WriteLine("Byeee!");
             }
-
-            Console.WriteLine("Thanks for playing!");
         }
     }
 }
