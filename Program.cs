@@ -4,24 +4,14 @@ namespace MyFirstProgram
 {
     class Program
     {
+        //Generating random numbers
         static void Main(string[] args)
         {
+            Random random = new Random();
 
-            double x = 3;
-            double y = 5;
+           int num = random.Next(1, 7);
 
-            double a = Math.Pow(x, 2);
-            double b = Math.Sqrt(x);
-            double c = Math.Abs(x);
-            double d = Math.Round(x);
-            double e = Math.Ceiling(x);
-            double f = Math.Floor(x);
-            double g = Math.Max(x, y);
-            double h = Math.Min(x, y);
-
-            Console.WriteLine(a);
-
-            
+           Console.WriteLine(num);
         }
     }
 }
