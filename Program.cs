@@ -4,7 +4,7 @@ namespace MyFirstProgram
 {
     class Program
     {
-        // C# methods
+        // C# methods.
         static void Main(string[] args)
         {
             double x;
