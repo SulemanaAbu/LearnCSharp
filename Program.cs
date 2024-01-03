@@ -4,28 +4,24 @@ namespace MyFirstProgram
 {
     class Program
     {
-        // C# methods.
+        // C# methods overloading
         static void Main(string[] args)
         {
-            double x;
-            double y;
-            double result;
-            
-            Console.WriteLine("Enter x: ");
-            x = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("x = "+x);
-            
-            Console.WriteLine("Enter y: ");
-            y = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("y = "+y);
+            double total;
+            total = Multiply(2, 3);
 
-            result = Multiply(x,y);
-            Console.WriteLine($"The result {x} * {y} = "+result);
+            Console.WriteLine(total);
+            
         }
 
-        static double Multiply(double x ,double y)
+        static double Multiply(double a, double b)
         {
-            return  x * y;
+            return  a * b;
+        }
+        
+        static double Multiply(double a, double b, double c)
+        {
+            return a * b * c;
         }
         
     }
