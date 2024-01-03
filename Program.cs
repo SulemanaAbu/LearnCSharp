@@ -4,34 +4,51 @@ namespace MyFirstProgram
 {
     class Program
     {
-        //The almighty formula of quadratic expressions
+        //If and else statements
         static void Main(string[] args)
         {
-            Console.WriteLine("The almighty formula for quadratic expressions");
+            Console.WriteLine("Checking grade by asking student score");
 
-            Console.WriteLine("Enter the coefficient of x-squared (a): ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The coefficient of x-squared is "+a);
-            
-            Console.WriteLine("Enter the coefficient of x (b): ");
-            int b = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The coefficient of x is "+b);
-            
-            Console.WriteLine("Enter the constant (c): ");
-            int c = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The constant is "+c);
+            Console.WriteLine("Enter the name of the course: ");
+            String course = Console.ReadLine();
+            Console.WriteLine("You are checking your grade for: "+course);
 
-            double pos = -b + Math.Sqrt((b * b) - (4 * a * c));
-            double neg = -b - Math.Sqrt((b * b) - (4 * a * c));
+            Console.WriteLine("Enter the score obtained: ");
+            int score = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("You obtained "+score+" in "+course);
 
-            double X1 = pos / (2 * a);
-            double X2 = neg / (2 * a);
-            
-            Console.WriteLine("The first result of the quadratic is "+X1);
-            Console.WriteLine("The second result of the quadratic is "+X2);
-
-
-
+            if (score > 100)
+            {
+                Console.WriteLine("Enter a valid Score!");
+            }
+            else if (score  >= 80)
+            {
+                Console.WriteLine("Congratulations! You scored an A");
+            }
+            else if (score >= 70)
+            {
+                Console.WriteLine("Congratulations! You scored a B");
+            }
+            else if (score >= 60)
+            {
+                Console.WriteLine("Average! You scored a C");
+            }
+            else if (score >= 50)
+            {
+                Console.WriteLine("You can do better! You scored a D");
+            }
+            else if (score >= 40)
+            {
+                Console.WriteLine("Bad! You scored an E ");
+            }
+            else if (score >= 0)
+            {
+                Console.WriteLine("Onukpa! You don fail");
+            }
+            else
+            {
+                Console.WriteLine("Bibinii ne gyimie di3!!!!!!");
+            }
 
         }
     }
