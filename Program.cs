@@ -4,22 +4,40 @@ namespace MyFirstProgram
 {
     class Program
     {
-        // Params keyword
+        // exception handling
         static void Main(string[] args)
         {
-            double total = checkOut(2,4,3,2,7);;
-            Console.WriteLine(total);
-        }
-
-        static double checkOut(params double[] prices)
-        {
-            double total = 0;
-
-            foreach (double price in prices)
+            try
             {
-                total += price;
+                double x;
+                double y;
+                double z;
+
+                Console.WriteLine("Enter the value of x: ");
+                x = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter the value of y: ");
+                y = Convert.ToInt32(Console.ReadLine());
+
+                z = x / y;
+                Console.WriteLine($"The result of {x} / {y} = " + z);
             }
-            return total;
+            catch (FormatException e)
+            {
+                Console.WriteLine("Enter only numbers please!");
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine("You can't Divide by zero Dummy!!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went wrong!!!");
+            }
+            finally
+            {
+                Console.WriteLine("Thank you!");
+            }
         }
         
 
