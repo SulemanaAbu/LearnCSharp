@@ -7,10 +7,11 @@ namespace MyFirstProgram
         // Objects
         static void Main(string[] args)
         {
-            Human human = new Human("Rick", 23);
-          
-            human.eat();
-            human.speak();
+            Car car1 = new Car("Chevrolet", "Corvette", 2022);
+            Car car2 = new Car("Toyota", "Camry", 2020);
+            
+            car1.Stop();
+            car2.Move();
         }
         
     }
