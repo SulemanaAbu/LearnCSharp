@@ -4,25 +4,24 @@ namespace MyFirstProgram
 {
     class Program
     {
-        // C# methods overloading
+        // Params keyword
         static void Main(string[] args)
         {
-            double total;
-            total = Multiply(2, 3);
-
+            double total = checkOut(2,4,3,2,7);;
             Console.WriteLine(total);
-            
         }
 
-        static double Multiply(double a, double b)
+        static double checkOut(params double[] prices)
         {
-            return  a * b;
+            double total = 0;
+
+            foreach (double price in prices)
+            {
+                total += price;
+            }
+            return total;
         }
         
-        static double Multiply(double a, double b, double c)
-        {
-            return a * b * c;
-        }
-        
+
     }
 }
