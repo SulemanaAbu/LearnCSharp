@@ -4,6 +4,7 @@ namespace MyFirstProgram
 {
     class Program
     {
+        //
         // Enumeration / enums
         static void Main(string[] args)
         {
