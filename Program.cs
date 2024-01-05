@@ -7,12 +7,14 @@ namespace MyFirstProgram
         // Overloading Constructors
         static void Main(string[] args)
         {
-            Pizza pizza1 = new Pizza("Brown bread", "Tomato", "Cattle", "Pepperoni");
-            Pizza pizza2 = new Pizza("Butter", "Egg", "Goat");
-            Pizza pizza3 = new Pizza("Butter", "Egg");
-            Pizza pizza4 = new Pizza("Butter");
+            Vehicle vehicle = new Vehicle();
+            Car car = new Car();
 
-            Console.WriteLine(pizza1.bread);
+            car.make = "Ferrari";
+            Console.WriteLine(car.wheels);
+            
+           
+           car.Move();
         }
         
     }
