@@ -2,6 +2,9 @@ namespace MyFirstProgram;
 
 public class Bicycle : Vehicle
 {
-    public int wheels = 4;
-    private int maxSpeed = 200;
+    public override void Move()
+    {
+        Console.WriteLine("The bike is moving");
+    }
+    
 }
