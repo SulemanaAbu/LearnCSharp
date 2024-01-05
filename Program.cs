@@ -4,12 +4,11 @@ namespace MyFirstProgram
 {
     class Program
     {
-        // Getters and Sstters
+        // Enumeration / enums
         static void Main(string[] args)
         {
-            Car car = new Car("Porsche");
-
-            Console.WriteLine(car.Model);
+            Console.WriteLine(Planet.Pluto+" is a planet");
+            Console.WriteLine(Planet.Mercury+" is  planet #"+(int)Planet.Mercury);
         }
 
     }
