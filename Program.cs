@@ -1,28 +1,45 @@
 ﻿using System;
+using System.Threading;
 
 namespace MyFirstProgram
 {
     class Program
     {
-        //
-        // Enumeration / enums
+        // Multi-threading
         static void Main(string[] args)
         {
-            Console.WriteLine(Planet.Pluto+" is a planet");
-            Console.WriteLine(Planet.Mercury+" is  planet #"+(int)Planet.Mercury);
+           Thread mainThread = Thread.CurrentThread;
+           mainThread.Name = "Main Thread";
 
-            String name = planetRadius.Earth.ToString();
-            int radius = (int)planetRadius.Earth;
-            Console.WriteLine("planet: "+name);
-            Console.WriteLine("radius: "+radius+" km");
-            double volume = Volume(planetRadius.Earth);
-            Console.WriteLine("The volume of the earth is: "+volume+" km^3");
+           Thread thread1 = new Thread(() => CountDown("Timer #1"));
+           Thread thread2 = new Thread(() =>CountUp("Timer #2")); 
+           thread1.Start();
+           thread2.Start();
+
+           Console.WriteLine(mainThread.Name + " is complete!");
+           
+           
         }
 
-        public static double Volume(planetRadius radius)
+        public static void CountDown(String name)
         {
-            double volume = (4.0 / 3.0) * Math.PI * Math.Pow((int)radius, 3);
-            return volume;
+            for (int i = 10; i >= 0; i--)
+            {
+                Console.WriteLine("Timer #1: "+i+" seconds");
+                Thread.Sleep(1000);
+            }
+
+            Console.WriteLine("Timer #1 is completed!");
+        }
+
+        public static void CountUp(String name)
+        {
+            for (int i = 0; i<=10; i++)
+            {
+                Console.WriteLine("Timer #2 "+i+" seconds");
+            }
+
+            Console.WriteLine("Timer #2 has completed!");
         }
 
     }
