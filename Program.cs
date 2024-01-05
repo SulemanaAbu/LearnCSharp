@@ -4,20 +4,13 @@ namespace MyFirstProgram
 {
     class Program
     {
-        // Method Overriding
+        // ToString Method
         static void Main(string[] args)
         {
-            Animal animal = new Animal();
-            Dog dog = new Dog();
-            Cat cat = new Cat();
-            
-            
-            dog.Speak();
-            cat.Speak();
-
-
-
-
+            Car car = new Car("Chevrolet", "Corvette", 2022,"Blue");
+            Car car1 = new Car("Chevrolet", "Camaro", 2022,"Blue");
+            Console.WriteLine(car);
+            Console.WriteLine(car1);
         }
         
     }
