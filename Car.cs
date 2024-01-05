@@ -2,22 +2,22 @@ namespace MyFirstProgram;
 
 public class Car
 {
-  public String make;
-  public String model;
-  public int year;
-  public String color;
+   String model;
 
-  public Car(String make, String model, int year, String color)
+  public String Model
   {
-    this.make = make;
-    this.model = model;
-    this.year = year;
-    this.color = color;
+    get {
+      return model;
+    }
+    set { model = value; }
   }
+ 
+  
+  
+  public Car(String model)
+  {
+    this.Model = model;
+  }
+  
 
-  public override string ToString()
-  {
-    String message = "This is a " + make + " " + model;
-    return message;
-  }
 }

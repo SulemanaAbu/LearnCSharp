@@ -4,17 +4,12 @@ namespace MyFirstProgram
 {
     class Program
     {
-        // ToString Method
+        // Getters and Sstters
         static void Main(string[] args)
         {
-            Fish fish = new Fish();
-            Rabbit rabbit = new Rabbit();
-            Hawk hawk = new Hawk();
+            Car car = new Car("Porsche");
 
-            rabbit.Flee();
-            fish.Flee();
-            fish.Chase();
-            hawk.Chase();
+            Console.WriteLine(car.Model);
         }
 
     }
