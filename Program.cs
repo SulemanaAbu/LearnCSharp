@@ -4,17 +4,12 @@ namespace MyFirstProgram
 {
     class Program
     {
-        // Overloading Constructors
+        // Abstract classes
         static void Main(string[] args)
         {
-            Vehicle vehicle = new Vehicle();
-            Car car = new Car();
-
-            car.make = "Ferrari";
-            Console.WriteLine(car.wheels);
             
-           
-           car.Move();
+            Car car = new Car();
+            Bicycle bike = new Bicycle();
         }
         
     }

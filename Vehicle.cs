@@ -1,6 +1,6 @@
 namespace MyFirstProgram;
 
-public class Vehicle
+ abstract public class Vehicle
 {
 
     public String make;
