@@ -1,7 +1,11 @@
 namespace MyFirstProgram;
 
-public class Car : Vehicle
+public class Car
 {
-  public int wheels = 4;
-  private int maxSpeed = 500;
+  public String model;
+
+  public Car(String model)
+  {
+    this.model = model;
+  }
 }
