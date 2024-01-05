@@ -7,16 +7,15 @@ namespace MyFirstProgram
         // ToString Method
         static void Main(string[] args)
         {
-            Bicycle bike = new Bicycle();
-            Boat boat = new Boat();
+            Fish fish = new Fish();
+            Rabbit rabbit = new Rabbit();
+            Hawk hawk = new Hawk();
 
-            Vehicle[] vehicles = { bike, boat };
-            
-            foreach (Vehicle vehicle in vehicles)
-            {
-                vehicle.Move();
-            }
+            rabbit.Flee();
+            fish.Flee();
+            fish.Chase();
+            hawk.Chase();
         }
-        
+
     }
 }
