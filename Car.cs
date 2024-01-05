@@ -5,12 +5,14 @@ public class Car
     public String make;
     public String model;
     public int year;
+   public static int numberOfcars;
 
-    public Car(String make, String model, int year)
+    public  Car(String make, String model, int year)
     {
         this.make = make;
         this.model = model;
         this.year = year;
+        numberOfcars++;
     }
 
 
@@ -21,5 +23,14 @@ public class Car
     public void Stop()
     {
         Console.WriteLine(year+" "+ make +" "+model+" has stopped");
+    }
+    public static void endRace()
+    {
+        Console.WriteLine("The race has ended!");
+    }
+
+    public void Race()
+    {
+        Console.WriteLine($"{make} has won the race!");
     }
 }
